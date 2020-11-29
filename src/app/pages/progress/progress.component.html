@@ -1,1 +1,60 @@
-<p>progress works!</p>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Barrita mágica <a class="get-code" data-toggle="collapse" href="#pgr2" aria-expanded="true"><i class="fa fa-code" title="" data-toggle="tooltip" data-original-title="Get Code"></i></a></h4>
+                <div class="collapse m-t-15" id="pgr2"> <pre class="line-numbers language-javascript"><code>&lt;div class="progress"&gt;<br>&lt;div class="progress-bar bg-success" role="progressbar" style="width: 75%;height:15px;" role="progressbar""&gt; 75% &lt;/div&gt;<br>&lt;/div&gt;</code></pre> </div>
+                <div class="progress m-t-20">
+                    <div class="progress-bar bg-success" 
+                         style="height:15px" 
+                         [style.width]="getProgreso1"
+                         role="progressbar"></div>
+
+                </div>
+
+
+                <div class="progress m-t-20">
+                    <div class="progress-bar bg-info" 
+                         style="height:15px"  
+                         [style.width]="getProgreso2"
+                         role="progressbar"></div>
+
+                        
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">   
+    <div class="col-lg-4">
+        <app-incrementador (valor)="progreso1 = $event"  
+                            [valor]="progreso1">
+        </app-incrementador>
+       
+    </div>
+</div>    
+
+
+
+<br>
+
+
+<div class="row">
+    <div class="col-lg-4">    
+               
+     <app-incrementador (valor)="progreso2 = $event" 
+                        [valor]="progreso2">
+     </app-incrementador>          
+        
+    </div>
+</div>
+
+<div class="row">
+ 
+</div>
